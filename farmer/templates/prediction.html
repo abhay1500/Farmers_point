@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/prediction.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="prediction-header"><b>Crop Status</b></div>
+<div class="prediction-container">
+    <div id="original">
+        <h2>Original</h2>
+        <img src="/static/images/Farmland_2.png" style="height:250px; width:250px" alt="">
+    </div>
+    <div id="output-container">
+        <div id="output">
+            <h2>Output</h2>
+            {% comment %} <img src="/static/segmented/rgbMJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJWDUMQT9MJ.png" style="height:250px; width:250px" alt=""> {% endcomment %}
+            <img src="/static/segmented/rgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8XrgbFY1AYCV8Xrg.png " style="height:250px; width:250px" alt="">
+            {% comment %} <img src="/static/segmented/rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rgbMKHWDUHY8rg.png " style="height:250px; width:250px" alt="">{% endcomment %}
+            {% comment %} <img src="/static/segmented/rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4rgbMOURFZ4.png " style="height:250px; width:250px" alt="">{% endcomment %}
+        </div>
+        <div id="lables">
+            <div id="lables-header">
+                <b>Categories</b>
+            </div>
+            <table>
+                <tr>
+                    <td><span id="yellow-square"></span></td>
+                    <td><span id="label-text">Weed Cluster</span></td>
+                </tr>
+                <tr>
+                    <td><span id="green-square"></span></td>
+                    <td><span id="label-text">Healthy</span></td>
+                </tr>
+                <tr>
+                    <td><span id="purple-square"></span></td>
+                    <td><span id="label-text">Dry Down</span></td>
+                </tr>
+                <tr>
+                    <td><span id="red-square"></span></td>
+                    <td><span id="label-text">Water Logged</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
